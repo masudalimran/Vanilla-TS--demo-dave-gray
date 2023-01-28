@@ -9,33 +9,40 @@
   </head>
   <body class="h-screen bg-yellow-100">
     <h1 class="text-center text-2xl underline">TODO List</h1>
-    <section class="newItemEntry">
-      <form class="flex justify-center items-center mt-2" id="itemEntryForm">
-        <label for="newItem" class="mx-2">Enter a new to do item</label>
+    <section class="newItemEntry mx-2 lg:mx-0">
+      <form
+        class="flex flex-col sm:flex-row gap-2 justify-center items-center mt-2"
+        id="itemEntryForm"
+      >
+        <label
+          for="newItem"
+          class="hidden lg:block mx-2 lg:mx-0 lg:ml-2 font-thin text-lg w-[320px]"
+          >Enter a new to do item</label
+        >
         <input
-          class="border border-green-500 rounded h-[35px] px-2 w-full"
+          class="border border-green-500 rounded h-[35px] px-2 w-full focus:border-green-500 active:border-green-500"
           id="newItem"
           type="text"
           maxlength="40"
           autocomplete="off"
-          placeholder="Add item"
+          placeholder="Item Name..."
         />
         <button
           id="addItem"
-          class="bg-green-700 text-white px-6 mx-2 rounded h-[35px]"
+          class="bg-green-700 text-white px-6 mx-2 rounded h-[35px] hover:scale-90 hover:transition-transform duration-500 w-full sm:w-[250px] lg:mx-0"
           title="Add new item"
           aria-label="Add new item to list"
           type="submit"
         >
-          +
+          Add
         </button>
         <button
           id="clearItemsButton"
-          class="bg-red-700 text-white px-6 mx-2 rounded h-[35px]"
+          class="bg-red-300 text-black px-6 mx-2 rounded h-[35px] hover:scale-90 hover:transition-transform duration-500 w-full sm:w-[250px] lg:mx-0 lg:mr-2"
           title="Clear the list"
           aria-label="Remove all items from the list"
         >
-          Clear
+          Clear All
         </button>
       </form>
     </section>

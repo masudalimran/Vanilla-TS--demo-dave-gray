@@ -45,13 +45,14 @@ export default class ListTemplate implements DOMList {
       const label = document.createElement("label") as HTMLLabelElement;
       label.className = "mx-2";
       label.htmlFor = item.id;
-      label.textContent = item.item;
+      label.textContent = item.item.toUpperCase();
       div.append(label);
       li.append(div);
 
       const button = document.createElement("button") as HTMLButtonElement;
-      button.className = "px-10 bg-red-700 rounded text-white";
-      button.textContent = "X";
+      button.className =
+        "px-10 bg-red-700 rounded text-white hover:scale-90 hover:transition-transform duration-500";
+      button.textContent = "Delete";
       li.append(button);
 
       button.addEventListener("click", () => {
